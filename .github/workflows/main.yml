@@ -24,8 +24,9 @@ jobs:
       - name: Run scraper
         id: scraper
         run: |
-          set -e
-          python ./judilibre_scraper.py
+          cd $GITHUB_WORKSPACE
+          ls -l  
+          python judilibre_scraper.py
 
       - name: Send daily report
         if: ${{ success() }}
