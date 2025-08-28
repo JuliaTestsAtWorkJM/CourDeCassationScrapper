@@ -25,7 +25,7 @@ jobs:
         id: scraper
         run: |
           set -e
-          python judilibre_scraper.py
+          python ./judilibre_scraper.py
 
       - name: Send daily report
         if: ${{ success() }}
