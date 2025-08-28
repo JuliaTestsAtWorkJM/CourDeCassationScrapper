@@ -39,8 +39,7 @@ jobs:
           subject: "Judilibre Daily Report"
           to: ${{ secrets.EMAIL_TO }}
           from: ${{ secrets.EMAIL_USER }}
-          content_type: text/html
-          body_path: changes_${{ github.run_date }}.md
+          html_body: ${{ steps.get_report.outputs.report_content }}
 
       - name: Send error notification
         if: ${{ failure() }}
