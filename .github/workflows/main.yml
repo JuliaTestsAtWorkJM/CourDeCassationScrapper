@@ -26,7 +26,7 @@ jobs:
         run: |
           cd $GITHUB_WORKSPACE
           ls -l  
-          python judilibre_scraper.py
+          python CourDeCassationScraper.py
 
       - name: Send daily report
         if: ${{ success() }}
